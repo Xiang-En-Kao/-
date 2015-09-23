@@ -3,3 +3,8 @@
 
 # 2.設計： 
 ![](http://i.imgur.com/OrUYFHS.jpg)
+
+# 3.撰碼
+
+
+# 4.測試
