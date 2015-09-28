@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example89-production</title>
+  <link href="animations.css" rel="stylesheet" type="text/css">
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular-animate.js"></script>
+  
+
+  
+</head>
+<body ng-app="ngAnimate">
+  <div ng-init="books = [
+  {ISBN:'9789861900582',name:'水滸傳', writer:'施耐庵', publish:'遊目族文化',type:'文學',price:'NT$400'},
+  {ISBN:'9789571179865',name:'三國演義', writer:'羅貫中', publish:'五南',type:'文學',price:'NT$400'},
+  {ISBN:'9789866351204',name:'西遊記', writer:'吳承恩', publish:'西北國際文化',type:'文學',price:'NT$400'},
+  {ISBN:'9789863476054',name:'Java技術手冊', writer:' 	Benjamin J Evans, David Flanagan', publish:'碁峰資訊 ',type:'科技',price:'NT$500'},
+  {ISBN:'9789576619670',name:'物件導向系統分析與設計', writer:'顏春煌, 曾展鵬', publish:'空大 ',type:'科技',price:'NT$500'},
+]">
+  <input type="text" ng-model="search.ISBN" />
+  <ul class="example-animate-container">
+    <li class="animate-repeat" ng-repeat="books in books | filter:search as results">
+      書名：{{books.name}}　　作者：{{books.writer}}　　出版商：{{books.publish}}　　價格：{{books.price}}　　ISBN：{{books.ISBN}}　　類型：{{books.type}}<hr>
+    </li>
+    <li class="animate-repeat" ng-if="results.length == 0">
+      <strong>No results found...</strong>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
